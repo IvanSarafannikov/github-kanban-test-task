@@ -1,23 +1,26 @@
 # Github Kanban Board
 
-Implement GitHub repo issues viewer as a kanban board
+Implement a simple kanban board service with backend and frontend.
 
 ## Requirements
-1. User should enter repo URL in the input on top of the page and press "Load". For example: `https://github.com/facebook/react`.
-2. App loads issues for the repo using Github API.
-3. App contains 3 columns:
-- ToDo (all new issues)
-- In Progress (opened issues with assignee)
-- Done (closed issues)
+1. User should enter unique workspace ID in the input on top of the page and press "Connect". For example: `600796a8-9e79-4894-84b4-def927689c57`.
+2. User should also be able to create a new workspace and have its ID automatically put in the input.
+3. App loads tasks from the provided workspace
+4. App contains 3 columns:
+- ToDo
+- In Progress
+- Done
 
-4. User should be able to drag-n-drop between the columns and change the order of issues.
-5. Current issue position (column and order) should be stored between search and browser sessions. When the user loads issues for Repo1 -> Repo2 -> Repo1 he should see all changes he did for Repo1.
-6. User should be able to visit the profile of the owner of the repo and visit the repo as well by links under the input.
+4. User should be able to drag-n-drop between the columns and change the order of tasks.
+5. User should be able to create new tasks.
+6. All changes should be sent to the server and stored in the database.
+7. Each workspace should have separate task lists.
 
 ## Technologies
 
 You should use exactly the listed technologies or one of them if it is allowed:
 
+### Frontend
 - React 18 with hooks, no classes
 - Typescript
 - UI library (on your choice):
@@ -34,6 +37,12 @@ You should use exactly the listed technologies or one of them if it is allowed:
   - Cypress
 - any other library you need
 
+### Backend
+- NodeJS, any LTS version that isn't EOL
+- Typescript
+- Express or NestJS
+- PostgreSQL or MongoDB
+
 ## Assessment
 
 What will we assess:
@@ -48,6 +57,6 @@ What will we assess:
 ![Design](./design.png)
 
 ## How to complete the task
-- create a new public repo on Github
+- create a new public repo on Github (do **NOT** fork this repository)
 - develop the application according to the requirements
 - send us the link to your repo
